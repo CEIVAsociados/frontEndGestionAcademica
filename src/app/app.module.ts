@@ -15,13 +15,21 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { CursoAddComponent } from './components/curso/curso-add/curso-add.component';
+import { CursoEditComponent } from './components/curso/curso-edit/curso-edit.component';
+import { CursoListComponent } from './components/curso/curso-list/curso-list.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DirectorAcademicoComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    CursoAddComponent,
+    CursoEditComponent,
+    CursoListComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

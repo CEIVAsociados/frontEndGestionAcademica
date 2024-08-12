@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DirectorAcademicoComponent } from './Director-Academico/director-academico.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 /*Menu Toolbar*/
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -13,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
+import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { CursoAddComponent } from './components/curso/curso-add/curso-add.component';
@@ -41,7 +43,9 @@ import { NavComponent } from './components/nav/nav.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    HttpClientModule,
+    FormsModule
 ],
   providers: [],
   bootstrap: [AppComponent]

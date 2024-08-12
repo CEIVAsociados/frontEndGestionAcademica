@@ -12,6 +12,6 @@ export class NavComponent {
   }
 
   public salir(){
-    this.router.navigate(['login']);
+    this.router.navigate(['home']);
   }
 }

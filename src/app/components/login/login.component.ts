@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
+import { UserEntity } from 'src/app/entities/user.entity';
+import { LoginService } from '../../services/login.service'
 
 @Component({
   selector: 'app-login',
@@ -7,17 +10,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  user:UserEntity = new UserEntity();
 
-  constructor(private router:Router){
+  constructor(
+    private loginService:LoginService,
+    private router:Router){
 
   }
 
   public login(){
-    this.router.navigate(['cursos']);
+    this.loginService.login(this.user).subscribe({
+      next:(response:UserEntity)=>{
+        console.log(response.userName)
+        this.router.navigate(['cursos']);
+      },
+      error:(error:HttpErrorResponse)=>{
+        console.log(error.status)
+        this.limpiar();
+      }
+    });
+    
   }
 
   public limpiar(){
-    
+    this.router.navigate(["login"]);
   }
 
 }

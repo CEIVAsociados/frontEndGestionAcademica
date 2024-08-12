@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment'
 import { Observable } from 'rxjs';
 import { UserEntity } from '../entities/user.entity';
 
@@ -7,8 +8,8 @@ import { UserEntity } from '../entities/user.entity';
   providedIn: 'root'
 })
 export class LoginService {
+  private url:string = environment.apiUrl;
   private httpHeaders: HttpHeaders=new HttpHeaders();
-  private url:string = "environment.apiUrl";
 
   constructor(private httpClient:HttpClient) {
 
@@ -17,7 +18,7 @@ export class LoginService {
   }
 
   public login(userEntity:UserEntity){
-    return this.httpClient.post<UserEntity>(this.url+"/users",userEntity);
+    return this.httpClient.post<UserEntity>(this.url+"/auth/login",userEntity);
   }
 
   

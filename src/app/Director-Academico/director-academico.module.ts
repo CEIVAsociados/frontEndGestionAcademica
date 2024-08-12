@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DirectorRoutingModule } from '../Director-Academico/director-routing.module';
+import { DirectorRoutingModule } from './director-routing.module';
 
 /*Menu Toolbar*/
 import {MatToolbarModule} from '@angular/material/toolbar';

@@ -1,0 +1,35 @@
+body {
+    padding-top: 56px;
+}
+.hero {
+    background: url('https://gestion.pe/resizer/aOTS8InSvDS9DS3x2KQxKhMaEAM=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/MEGLA3FU4JA6XMGSAKB6BGUFVE.jpg') no-repeat center center;
+    background-size: cover;
+    height: 600px;
+    color: #165564;
+}
+
+.img-width{
+    height: 50px;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+.section {
+    padding: 60px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+@media only screen and (max-width: 800px) {
+    /* For tablets: */
+    .h1 {font-size: 3rem;}
+  }
+  @media only screen and (min-width: 800px) {
+    /* For desktop: */
+    .h1 {font-size: 4rem;}
+  }

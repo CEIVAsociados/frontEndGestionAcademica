@@ -1,1 +1,20 @@
-<p>curso-add works!</p>
+<table style="margin:0 auto;" >
+    <tr>
+        <td>Nombre del curso:<input type="text" [(ngModel)]="curso.nombre" />  </td>
+    </tr>
+    <tr>
+        <td>Descripcion:<input type="text" [(ngModel)]="curso.descripcion" />  </td>
+    </tr>
+    <tr>
+        <td>Horario:<input type="text" [(ngModel)]="curso.horario" />  </td>
+    </tr>
+    <tr>
+        <td>Profesor:<input type="text" [(ngModel)]="curso.profesor"/>  </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="submit" (click)="crearCurso()" >Crear curso</button>
+            <button type="submit" (click)="salir()">Salir</button>
+        </td>
+    </tr>
+</table>|

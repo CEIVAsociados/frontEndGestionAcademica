@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ReuseStrategyCustome } from '../../customes/reusse-strategy.custome'
 
 import { RouteReuseStrategy, RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from 'src/app/components/login/login.component';
-import { HomeComponent } from 'src/app/components/home/home.component';
+import { LoginComponent } from '../../components/login/login.component';
+import { HomeComponent } from '../../components/home/home.component';
 
-import { CursoEditComponent } from 'src/app/components/curso/curso-edit/curso-edit.component';
-import { CursoAddComponent } from 'src/app/components/curso/curso-add/curso-add.component';
-import { CursoListComponent } from 'src/app/components/curso/curso-list/curso-list.component';
+import { CursoEditComponent } from '../../components/curso/curso-edit/curso-edit.component';
+import { CursoAddComponent } from '../../components/curso/curso-add/curso-add.component';
+import { CursoListComponent } from '../../components/curso/curso-list/curso-list.component';
+import { CursoInfoComponent } from '../../components/curso/curso-info/curso-info.component';
 
 /*import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { PersonListComponent } from 'src/app/components/person/person-list/person-list.component';
@@ -26,6 +27,7 @@ const routes:Routes=[
       { path: ':id', component: CursoEditComponent }
     ]  
   },
+  { path: 'cursosadd', component: CursoAddComponent }
 ];
 
 @NgModule({

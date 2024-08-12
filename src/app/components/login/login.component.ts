@@ -33,6 +33,7 @@ export class LoginComponent {
   }
 
   public limpiar(){
+    this.user = new UserEntity();
     this.router.navigate(["login"]);
   }
 

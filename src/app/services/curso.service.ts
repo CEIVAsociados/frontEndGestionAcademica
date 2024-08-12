@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment'
-import { UserEntity } from '../entities/user.entity';
+import { CursoEntity } from '../entities/curso.entity';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class CursoService {
   private url:string = environment.apiUrl;
   private httpHeaders: HttpHeaders=new HttpHeaders();
 
@@ -16,9 +16,8 @@ export class LoginService {
 
   }
 
-  public login(userEntity:UserEntity){
-    return this.httpClient.post<UserEntity>(this.url+"/auth/login",userEntity);
+  public crearCurso(cursoEntity:CursoEntity){
+    return this.httpClient.post<CursoEntity>(this.url+"/curses",cursoEntity);
   }
 
-  
 }

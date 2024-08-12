@@ -21,6 +21,7 @@ import { CursoAddComponent } from './components/curso/curso-add/curso-add.compon
 import { CursoEditComponent } from './components/curso/curso-edit/curso-edit.component';
 import { CursoListComponent } from './components/curso/curso-list/curso-list.component';
 import { NavComponent } from './components/nav/nav.component';
+import { CursoInfoComponent } from './components/curso/curso-info/curso-info.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NavComponent } from './components/nav/nav.component';
     CursoAddComponent,
     CursoEditComponent,
     CursoListComponent,
-    NavComponent
+    NavComponent,
+    CursoInfoComponent
   ],
   imports: [
     BrowserModule,

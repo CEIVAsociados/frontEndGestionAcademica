@@ -14,6 +14,7 @@ import { EstudianteComponent } from 'src/app/estudiante/estudiante.component';
 import { EstudianteCrearComponent } from 'src/app/estudiante/estudiante-crear/estudiante-crear.component';
 import { EstudianteDetalleComponent } from 'src/app/estudiante/estudiante-detalle/estudiante-detalle.component';
 import { EstudianteEditarComponent } from 'src/app/estudiante/estudiante-editar/estudiante-editar.component';
+import { DocenteComponent } from 'src/app/docente/docente.component';
 
 /*import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { PersonListComponent } from 'src/app/components/person/person-list/person-list.component';
@@ -35,6 +36,14 @@ const routes:Routes=[
   { path: 'cursosadd', component: CursoAddComponent },
   { path: 'cursosedit', component: CursoEditComponent },
   { path: 'estudiante', component: EstudianteComponent,
+    children: [
+      { path: 'add', component: EstudianteCrearComponent },
+      { path: 'estudiantelist', component: EstudianteComponent },
+      { path: 'detalle', component: EstudianteDetalleComponent },
+      { path: ':id', component: EstudianteEditarComponent },
+    ]  
+  },
+  { path: 'docente', component: DocenteComponent,
     children: [
       { path: 'add', component: EstudianteCrearComponent },
       { path: 'estudiantelist', component: EstudianteComponent },

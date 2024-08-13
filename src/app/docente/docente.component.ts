@@ -2,16 +2,12 @@ import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
-import { EstudianteEntity } from '../entities/estudiante.entity';
-import { Router } from '@angular/router';
-import { HttpErrorResponse } from '@angular/common/http';
-import { EstudianteService } from '../services/estudiante.service';
 @Component({
-  selector: 'app-estudiante',
-  templateUrl: './estudiante.component.html',
-  styleUrls: ['./estudiante.component.css']
+  selector: 'app-docente',
+  templateUrl: './docente.component.html',
+  styleUrls: ['./docente.component.css']
 })
-export class EstudianteComponent {
+export class DocenteComponent {
   @ViewChild(MatSidenav)
   sidenav !: MatSidenav;
 
@@ -31,5 +27,4 @@ export class EstudianteComponent {
     })
     this.cd.detectChanges();
   }
-  
 }

@@ -48,6 +48,7 @@ import { DocenteCrearComponent } from './docente/docente-crear/docente-crear.com
 import { DocenteEditarComponent } from './docente/docente-editar/docente-editar.component';
 import { DocenteListarComponent } from './docente/docente-listar/docente-listar.component';
 import { DocenteDetalleComponent } from './docente/docente-detalle/docente-detalle.component';
+import { DocenteComponent } from './docente/docente.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { DocenteDetalleComponent } from './docente/docente-detalle/docente-detal
     DocenteCrearComponent,
     DocenteEditarComponent,
     DocenteListarComponent,
-    DocenteDetalleComponent
+    DocenteDetalleComponent,
+    DocenteComponent
   ],
   imports: [
     BrowserModule,

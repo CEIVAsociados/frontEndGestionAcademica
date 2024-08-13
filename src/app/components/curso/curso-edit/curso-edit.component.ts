@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CursoEntity } from '../../../entities/curso.entity';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { CursoService } from '../../../services/curso.service';
 
@@ -14,13 +14,28 @@ export class CursoEditComponent {
 
   constructor(
     private cursoService:CursoService,
-    private router:Router
+    private router:Router,
+    private activatedRouter:ActivatedRoute
   ){
 
   }
 
+  ngOnInit(): void {
+    this.cursoService.getCurso( this.activatedRouter.snapshot.params['id'] ).subscribe(
+      {
+        next:(response:CursoEntity)=>{
+          this.curso = response;
+        },
+        error:(error:HttpErrorResponse)=>{
+          console.log(error.status);
+        }
+      }
+    );
+  }
+
+
   public modificarCurso(){
-    this.cursoService.crearCurso(this.curso).subscribe(
+    this.cursoService.modificarCurso(this.curso).subscribe(
       {
         next:(response:CursoEntity)=>{
           this.salir();
@@ -34,7 +49,17 @@ export class CursoEditComponent {
   }
 
   public eliminar(){
-
+    this.cursoService.eliminarCurso(this.curso._id).subscribe(
+      {
+        next:(response:CursoEntity)=>{
+          this.salir();
+        },
+        error:(error:HttpErrorResponse)=>{
+          console.log(error.status);
+          this.salir();
+        }
+      }
+    )
   }
 
   public salir(){

@@ -17,14 +17,18 @@ export class NavAdminComponent {
   }
 
   public profesores(){
-    this.router.navigate(['login']);
+    this.router.navigate(['docentes']);
   }
 
   public alumnos(){
-    this.router.navigate(['login']);
+    this.router.navigate(['estudiantes']);
   }
 
   public salir(){
     this.router.navigate(['login']);
+  }
+
+  public admin(){
+    this.router.navigate(['administrador']);
   }
 }

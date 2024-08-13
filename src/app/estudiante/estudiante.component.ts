@@ -15,7 +15,8 @@ export class EstudianteComponent {
   @ViewChild(MatSidenav)
   sidenav !: MatSidenav;
 
-  constructor(private observer: BreakpointObserver, private cd : ChangeDetectorRef){
+  constructor(private observer: BreakpointObserver, private cd : ChangeDetectorRef,
+    private router: Router){
 
   }
 
@@ -30,6 +31,10 @@ export class EstudianteComponent {
       }
     })
     this.cd.detectChanges();
+  }
+
+  public salir(){
+    this.router.navigate(['home']);
   }
   
 }

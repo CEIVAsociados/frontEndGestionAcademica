@@ -30,8 +30,13 @@ export class CursoListComponent {
   }
 
 
-  public crearCurso(){
+  public agregarCurso(){
+    this.router.navigate(['cursos/add']);
+  }
 
+  public editarCurso(id:string){
+    console.log("id del curso: "+ id);
+    this.router.navigate(['cursos/', id]);
   }
 
 }

@@ -4,27 +4,33 @@
     <h2 class="text-center">Lista de Cursos registrados en el sistema</h2>
 </div>
 <div class="container">
-    <button class="btn-primary">Agregar Nuevo Curso</button>
+    <button class="btn-primary" (click)="agregarCurso()" >Agregar Nuevo Curso</button>
 </div>
-
+<router-outlet></router-outlet>
 <br>
-<table style="margin: 0 auto;">
-    <tr>
-       <td colspan="4" style="text-align: center;" >Listado de Cursos</td>
-
-    </tr>
-    <tr>
-        <td>Titulo de curso</td>
-        <td>Descripcion</td>
-        <td>Profesos</td>
-        <td>Horario</td>
-        <td>Op</td>
-    </tr>
-    <tr *ngFor="let curso of cursos">
-        <td>{{curso.name}}</td>
-        <td>{{curso.description}}</td>
-        <td>{{curso.profesor}}</td>
-        <td>{{curso.schedule}}</td>
-        <td> <a [routerLink]="['/cursosedit', curso.name]">Editar</a> </td>
-    </tr>
-</table>
+<div class="container mt-5">
+    <table class="table table-striped table-bordered table-hover">
+        
+        <thead>
+            <tr>
+                <td colspan="5" style="text-align: center;" >Listado de Cursos</td>
+             </tr>
+            <tr>
+                <td>Titulo de curso</td>
+                <td>Descripcion</td>
+                <td>Profesores</td>
+                <td>Horario</td>
+                <td>Op</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let curso of cursos">
+                <td>{{curso.name}}</td>
+                <td>{{curso.description}}</td>
+                <td>{{curso.teacher}}</td>
+                <td>{{curso.schedule}}</td>
+                <td> <button class="btn btn-danger" (click)="editarCurso(curso._id)">Editar</button> </td>
+            </tr>
+        </tbody>    
+    </table>
+</div>

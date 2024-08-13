@@ -1,6 +1,6 @@
 <mat-card class="example-card">
     <mat-card-header class="header">
-        <mat-card-title class="titulo">Agregar nuevo docente</mat-card-title>
+        <mat-card-title class="titulo">Actualizar nuevo docente</mat-card-title>
         <mat-icon matSuffix>person</mat-icon>
     </mat-card-header>
     
@@ -9,11 +9,11 @@
     <mat-card-content class="content">
         <mat-form-field class="field" appearance="fill">
             <mat-label>Dni del docente</mat-label>
-            <input matInput formControlName="dni" type="text" id="dni" name="dni" [(ngModel)]="docente.dni" required>
+            <input matInput type="text" id="dni" name="dni" [(ngModel)]="docente.dni" required>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Nombre del docente</mat-label>
-            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="docente.nombre" required>
+            <input matInput type="text" id="nombre" name="nombre" [(ngModel)]="docente.nombre" required>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Apellidos del docente</mat-label>
@@ -35,8 +35,11 @@
     <mat-divider></mat-divider>
     <mat-card-footer class="footer">
         <div>
-            <button mat-raised-button class="button-container" color="primary" type="submit" (click)="editarDocente()" >Crear curso
+            <button mat-raised-button class="button-container" color="primary" type="submit" (click)="editarDocente()" >Actualizar
                 <mat-icon matSuffix>save</mat-icon>
+            </button>
+            <button mat-raised-button class="button-container" color="warn" type="submit" (click)="eliminar()">Eliminar
+                <mat-icon matSuffix>Delete</mat-icon>
             </button>
             <button mat-raised-button class="button-container" color="warn" type="submit" (click)="salir()">Salir
                 <mat-icon matSuffix>logout</mat-icon>

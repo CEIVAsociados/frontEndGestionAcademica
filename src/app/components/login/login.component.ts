@@ -10,17 +10,31 @@ import { LoginService } from '../../services/login.service'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  estudiante:Number = 3;
+  docente:Number = 2;
+  admin:Number = 1;
+
   user:UserEntity = new UserEntity();
 
   constructor(private loginService:LoginService, private router:Router){
 
   }
 
-  public login(){
+  public login(user:UserEntity){
     this.loginService.login(this.user).subscribe({
-      next:(response:UserEntity)=>{
-        console.log(response.userName)
-        this.router.navigate(['cursos']);
+      next:(response:any)=>{
+        console.log("role: " + response.role);
+
+        if(response.role == this.admin){
+          this.router.navigate(['administrador']);
+        }
+        if(response.role == this.docente){
+          this.router.navigate(['profesores']);
+        }
+        if(response.role == this.estudiante ){
+          this.router.navigate(['alumno']);
+        }
+        
       },
       error:(error:HttpErrorResponse)=>{
         console.log(error.status)

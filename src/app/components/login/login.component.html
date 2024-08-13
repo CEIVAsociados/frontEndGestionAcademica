@@ -11,13 +11,13 @@
       <form>  <!--[formGroup]="loginForm" (ngSubmit)="onSubmit()"-->
         <mat-form-field class="field" appearance="fill">
           <mat-label>Usuario</mat-label>
-          <input matInput formControlName="UserName"  id="userName" [(ngModel)]="user.userName" required>
+          <input matInput id="userName" name="userName" [(ngModel)]="user.userName" required>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
           <mat-label>Password</mat-label>
-          <input matInput type="password" formControlName="password" id="password" [(ngModel)]="user.password"required>
+          <input matInput type="password"  id="password"  name="password" [(ngModel)]="user.password"required>
         </mat-form-field>
-        <button class="example-button-container" mat-raised-button color="primary" type="submit" (click)="login()">Login</button>
+        <button class="example-button-container" mat-raised-button color="primary" type="submit" (click)="login(user)">Login</button>
         <!--<button class="example-button-container" mat-raised-button color="grey" type="submit" (click)="limpiar()">Login</button>-->
       </form>
     </mat-card-content>

@@ -10,7 +10,8 @@ import { CursoService } from '../../../services/curso.service';
   styleUrls: ['./curso-add.component.css']
 })
 export class CursoAddComponent {
-  curso:CursoEntity = new CursoEntity();
+  public curso:CursoEntity = new CursoEntity();
+  public flgError:boolean = false;
 
   constructor(
     private cursoService:CursoService,
@@ -27,7 +28,7 @@ export class CursoAddComponent {
         },
         error:(error:HttpErrorResponse)=>{
           console.log(error.message);
-          this.salir();
+          this.flgError = true;
         }
       }
     )

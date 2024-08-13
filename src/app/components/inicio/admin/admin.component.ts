@@ -17,10 +17,10 @@ export class AdminComponent {
   }
 
   public alumnos(){
-    this.router.navigate(['alumnos']);
+    this.router.navigate(['estudiantes']);
   }
 
   public profesores(){
-    this.router.navigate(['profesores']);
+    this.router.navigate(['docentes']);
   }
 }

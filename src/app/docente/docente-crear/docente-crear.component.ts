@@ -34,7 +34,7 @@ export class DocenteCrearComponent {
   }
 
   public salir(){
-    this.router.navigate(["docente"]);
+    this.router.navigate(["docentes"]);
   }
 
 }

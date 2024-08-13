@@ -1,4 +1,4 @@
-<app-nav-admin></app-nav-admin>
+
 <mat-card class="example-card">
     <mat-card-header class="header">
         <mat-card-title class="titulo">Agregar nuevo curso</mat-card-title>
@@ -10,7 +10,7 @@
     <mat-card-content class="content">
         <mat-form-field class="field" appearance="fill">
             <mat-label>Nombre del Curso</mat-label>
-            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="curso.name" required>
+            <input matInput type="text" id="nombre" name="nombre" [(ngModel)]="curso.name" required>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Descripción</mat-label>
@@ -22,7 +22,7 @@
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Profesor</mat-label>
-            <textarea matInput type="text" id="profesor" name="profesor" [(ngModel)]="curso.profesor" required></textarea>
+            <textarea matInput type="text" id="profesor" name="profesor" [(ngModel)]="curso.teacher" required></textarea>
         </mat-form-field>
     </mat-card-content>
     <mat-divider></mat-divider>
@@ -36,4 +36,7 @@
             </button>
         </div>        
     </mat-card-footer>
+    <div *ngIf="flgError">
+        <h2 style="color: red;" >Error al crear curso...</h2>
+    </div>
 </mat-card>

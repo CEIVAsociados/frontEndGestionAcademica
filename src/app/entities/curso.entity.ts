@@ -1,7 +1,8 @@
 export class CursoEntity{
+    _id:string;
     name:string;
     description:string;
     schedule:string;
-    profesor:string;
+    teacher:string;
     estado:number;
 }

@@ -1,3 +1,5 @@
+
+<br>
 <mat-card class="example-card">
     <mat-card-header class="header">
         <mat-card-title class="titulo">Actualizar curso</mat-card-title>
@@ -9,7 +11,7 @@
     <mat-card-content class="content">
         <mat-form-field class="field" appearance="fill">
             <mat-label>Nombre del Curso</mat-label>
-            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="curso.name" required>
+            <input matInput type="text" id="nombre" name="nombre" [(ngModel)]="curso.name" required>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Descripción</mat-label>
@@ -21,17 +23,20 @@
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Profesor</mat-label>
-            <textarea matInput type="text" id="profesor" name="profesor" [(ngModel)]="curso.profesor" required></textarea>
+            <textarea matInput type="text" id="profesor" name="profesor" [(ngModel)]="curso.teacher" required></textarea>
         </mat-form-field>
     </mat-card-content>
     <mat-divider></mat-divider>
     <mat-card-footer class="footer">
         <div>
-            <button mat-raised-button class="button-container" color="primary" type="submit" >Actualizar curso
+            <button mat-raised-button class="button-container" color="primary" type="submit" (click)="modificarCurso()" >Actualizar curso
                 <mat-icon matSuffix>save</mat-icon>
             </button>
-            <button mat-raised-button class="button-container" color="warn" type="submit">Eliminar
+            <button mat-raised-button class="button-container" color="warn" type="submit" (click)="eliminar()">Eliminar
                 <mat-icon matSuffix>Delete</mat-icon>
+            </button>
+            <button mat-raised-button class="button-container" color="warn" type="submit" (click)="salir()">Cancelar
+                <mat-icon matSuffix>logout</mat-icon>
             </button>
         </div>        
     </mat-card-footer>

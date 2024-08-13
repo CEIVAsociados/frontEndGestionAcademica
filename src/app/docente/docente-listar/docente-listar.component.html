@@ -1,1 +1,42 @@
-<p>docente-listar works!</p>
+<app-nav-admin></app-nav-admin>
+<br>
+<div class="container">
+    <h2 class="text-center">Lista de Docentes registrados en el sistema</h2>
+</div>
+<div class="container">
+    <button class="btn-primary" (click)="agregarDocente()">
+        Agregar Nuevo Docente
+    </button>
+    <router-outlet></router-outlet>
+</div>
+
+<br>
+<div class="container mt-5">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <td colspan="6" style="text-align: center;" >Listado de Docente</td>
+         
+             </tr>
+             <tr>
+                 <td>DNI</td>
+                 <td>Nombre</td>
+                 <td>Apellidos</td>
+                 <td>Especialidad</td>
+                 <td>Edad</td>
+                 <td>Op</td>
+             </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let docente of docentes">
+                <td>{{docente.dni}}</td>
+                <td>{{docente.nombre}}</td>
+                <td>{{docente.apellidos}}</td>
+                <td>{{docente.especialidad}}</td>
+                <td>{{docente.edad}}</td>
+                <td> <button class="btn btn-danger" (click)="editarDocente(docente._id)" >Editar</button> </td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>

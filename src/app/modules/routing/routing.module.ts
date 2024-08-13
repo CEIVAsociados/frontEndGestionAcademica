@@ -16,6 +16,11 @@ import { EstudianteDetalleComponent } from 'src/app/estudiante/estudiante-detall
 import { EstudianteEditarComponent } from 'src/app/estudiante/estudiante-editar/estudiante-editar.component';
 import { DocenteComponent } from 'src/app/docente/docente.component';
 import { AdminComponent } from 'src/app/components/inicio/admin/admin.component';
+import { DirectorAcademicoComponent } from 'src/app/Director-Academico/director-academico.component';
+import { DocenteListarComponent } from 'src/app/docente/docente-listar/docente-listar.component';
+import { DocenteCrearComponent } from 'src/app/docente/docente-crear/docente-crear.component';
+import { DocenteEditarComponent } from 'src/app/docente/docente-editar/docente-editar.component';
+import { EstudianteListaComponent } from 'src/app/estudiante/estudiante-lista/estudiante-lista.component';
 
 /*import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { PersonListComponent } from 'src/app/components/person/person-list/person-list.component';
@@ -34,8 +39,7 @@ const routes:Routes=[
       { path: ':id', component: CursoEditComponent },
     ]  
   },
-  { path: 'cursosedit', component: CursoEditComponent },
-  { path: 'estudiante', component: EstudianteComponent,
+  { path: 'estudiantes', component: EstudianteListaComponent,
     children: [
       { path: 'add', component: EstudianteCrearComponent },
       { path: 'estudiantelist', component: EstudianteComponent },
@@ -43,22 +47,15 @@ const routes:Routes=[
       { path: ':id', component: EstudianteEditarComponent },
     ]  
   },
-  { path: 'docente', component: DocenteComponent,
+  { path: 'docentes', component: DocenteListarComponent,
     children: [
-      { path: 'add', component: EstudianteCrearComponent },
-      { path: 'estudiantelist', component: EstudianteComponent },
-      { path: 'detalle', component: EstudianteDetalleComponent },
-      { path: ':id', component: EstudianteEditarComponent },
+      { path: 'add', component: DocenteCrearComponent },
+      { path: ':id', component: DocenteEditarComponent },
     ]  
   },
-  {path: 'estudianteadd', component: EstudianteCrearComponent },
-  { path: 'estudiantelist', component: EstudianteComponent },
-  { path: 'estudiantedetalle', component: EstudianteDetalleComponent },
-  { path: ':id', component: EstudianteEditarComponent },
-  { path: 'estudiantelist', component: EstudianteComponent },
-  { path: 'cursosadd', component: CursoAddComponent },
-  { path: 'admin', component: AdminComponent}
-  
+  { path: 'administrador', component: DirectorAcademicoComponent},
+  { path: 'alumno', component: EstudianteComponent},
+  { path: 'profesores', component: DocenteComponent}
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 export class DocenteEntity{
+    _id:string;
     dni:number;
     nombre:string;
     apellidos:string;

@@ -1,5 +1,5 @@
 export class UserEntity{
     userName: string;
     password: string;
-    estado:number;
+    role:number;
 }

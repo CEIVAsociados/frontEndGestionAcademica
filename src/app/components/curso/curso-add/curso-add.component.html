@@ -1,20 +1,62 @@
-<table style="margin:0 auto;" >
-    <tr>
-        <td>Nombre del curso:<input type="text" [(ngModel)]="curso.nombre" />  </td>
-    </tr>
-    <tr>
-        <td>Descripcion:<input type="text" [(ngModel)]="curso.descripcion" />  </td>
-    </tr>
-    <tr>
-        <td>Horario:<input type="text" [(ngModel)]="curso.horario" />  </td>
-    </tr>
-    <tr>
-        <td>Profesor:<input type="text" [(ngModel)]="curso.profesor"/>  </td>
-    </tr>
-    <tr>
-        <td>
-            <button type="submit" (click)="crearCurso()" >Crear curso</button>
-            <button type="submit" (click)="salir()">Salir</button>
-        </td>
-    </tr>
-</table>|
+<mat-card class="example-card">
+    <mat-card-header class="header">
+        <mat-card-title class="titulo">Agregar nuevo curso</mat-card-title>
+        <mat-icon matSuffix>book</mat-icon>
+    </mat-card-header>
+    
+    <mat-divider></mat-divider>
+
+    <mat-card-content class="content">
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Nombre del Curso</mat-label>
+            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="curso.nombre" required>
+        </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput type="text" id="descripcion" name="descripcion" [(ngModel)]="curso.descripcion" required></textarea>
+        </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Horario</mat-label>
+            <textarea matInput type="text" id="horario" name="horario" [(ngModel)]="curso.horario" required></textarea>
+        </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Profesor</mat-label>
+            <textarea matInput type="text" id="profesor" name="profesor" [(ngModel)]="curso.profesor" required></textarea>
+        </mat-form-field>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-footer class="footer">
+        <div>
+            <button mat-raised-button class="button-container" color="primary" type="submit" (click)="crearCurso()" >Crear curso
+                <mat-icon matSuffix>save</mat-icon>
+            </button>
+            <button mat-raised-button class="button-container" color="warn" type="submit" (click)="salir()">Salir
+                <mat-icon matSuffix>logout</mat-icon>
+            </button>
+        </div>        
+    </mat-card-footer>
+</mat-card>
+    
+   
+
+
+
+
+
+<!--<mat-card>
+
+   
+    
+       
+    
+    
+        
+            <button mat-raised-button color="primary" type="submit" (click)="crearCurso()" >Crear curso
+                <mat-icon matSuffix>save</mat-icon>
+            </button>
+            <button mat-raised-button color="warn" type="submit" (click)="salir()">Salir
+                <mat-icon matSuffix>logout</mat-icon>
+            </button>
+        </mat-form-field>
+    </mat-card-footer>
+  </mat-card>-->

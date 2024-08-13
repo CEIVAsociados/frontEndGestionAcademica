@@ -1,20 +1,39 @@
-<table style="margin:0 auto;" >
-    <tr>
-        <td>Nombre del curso:<input type="text"  />  </td>
-    </tr>
-    <tr>
-        <td>Descripcion:<input type="text"  />  </td>
-    </tr>
-    <tr>
-        <td>Horario:<input type="text" />  </td>
-    </tr>
-    <tr>
-        <td>Profesor:<input type="text" />  </td>
-    </tr>
-    <tr>
-        <td>
-            <button type="submit" >Actualizar curso</button>
-            <button type="submit">Eliminar</button>
-        </td>
-    </tr>
-</table>|
+<mat-card class="example-card">
+    <mat-card-header class="header">
+        <mat-card-title class="titulo">Actualizar curso</mat-card-title>
+        <mat-icon matSuffix>book</mat-icon>
+    </mat-card-header>
+    
+    <mat-divider></mat-divider>
+
+    <mat-card-content class="content">
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Nombre del Curso</mat-label>
+            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="curso.nombre" required>
+        </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput type="text" id="descripcion" name="descripcion" [(ngModel)]="curso.descripcion" required></textarea>
+        </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Horario</mat-label>
+            <textarea matInput type="text" id="horario" name="horario" [(ngModel)]="curso.horario" required></textarea>
+        </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+            <mat-label>Profesor</mat-label>
+            <textarea matInput type="text" id="profesor" name="profesor" [(ngModel)]="curso.profesor" required></textarea>
+        </mat-form-field>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-footer class="footer">
+        <div>
+            <button mat-raised-button class="button-container" color="primary" type="submit" >Actualizar curso
+                <mat-icon matSuffix>save</mat-icon>
+            </button>
+            <button mat-raised-button class="button-container" color="warn" type="submit">Eliminar
+                <mat-icon matSuffix>Delete</mat-icon>
+            </button>
+        </div>        
+    </mat-card-footer>
+</mat-card>
+    

@@ -35,12 +35,19 @@ import { NavComponent } from './components/nav/nav.component';
 import { CursoInfoComponent } from './components/curso/curso-info/curso-info.component';
 import { AppComponent } from './app.component';
 import { DirectorAcademicoComponent } from './Director-Academico/director-academico.component';
+import { EstudianteComponent } from './estudiante/estudiante.component';
+import { EstudianteCrearComponent } from './estudiante/estudiante-crear/estudiante-crear.component';
+import { EstudianteEditarComponent } from './estudiante/estudiante-editar/estudiante-editar.component';
 
 /**Importaciones de material */
 import { ReactiveFormsModule } from '@angular/forms';
 
 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { DocenteCrearComponent } from './docente/docente-crear/docente-crear.component';
+import { DocenteEditarComponent } from './docente/docente-editar/docente-editar.component';
+import { DocenteListarComponent } from './docente/docente-listar/docente-listar.component';
+import { DocenteDetalleComponent } from './docente/docente-detalle/docente-detalle.component';
 import { NavAdminComponent } from './components/nav-admin/nav-admin.component';
 import { AdminComponent } from './components/inicio/admin/admin.component';
 
@@ -55,6 +62,13 @@ import { AdminComponent } from './components/inicio/admin/admin.component';
     NavComponent,
     CursoInfoComponent,
     LoginComponent,
+    EstudianteComponent,
+    EstudianteCrearComponent,
+    EstudianteEditarComponent,
+    DocenteCrearComponent,
+    DocenteEditarComponent,
+    DocenteListarComponent,
+    DocenteDetalleComponent,
     NavAdminComponent,
     AdminComponent
   ],

@@ -48,6 +48,7 @@ import { DocenteCrearComponent } from './docente/docente-crear/docente-crear.com
 import { DocenteEditarComponent } from './docente/docente-editar/docente-editar.component';
 import { DocenteListarComponent } from './docente/docente-listar/docente-listar.component';
 import { DocenteDetalleComponent } from './docente/docente-detalle/docente-detalle.component';
+import { DocenteComponent } from './docente/docente.component';
 import { NavAdminComponent } from './components/nav-admin/nav-admin.component';
 import { AdminComponent } from './components/inicio/admin/admin.component';
 
@@ -69,6 +70,7 @@ import { AdminComponent } from './components/inicio/admin/admin.component';
     DocenteEditarComponent,
     DocenteListarComponent,
     DocenteDetalleComponent,
+    DocenteComponent,
     NavAdminComponent,
     AdminComponent
   ],

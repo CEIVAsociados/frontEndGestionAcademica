@@ -1,6 +1,6 @@
 <mat-card class="example-card">
     <mat-card-header class="header">
-        <mat-card-title class="titulo">Agregar nuevo estudiante</mat-card-title>
+        <mat-card-title class="titulo">Agregar nuevo docente</mat-card-title>
         <mat-icon matSuffix>person</mat-icon>
     </mat-card-header>
     
@@ -8,34 +8,34 @@
 
     <mat-card-content class="content">
         <mat-form-field class="field" appearance="fill">
-            <mat-label>Dni del estudiante</mat-label>
-            <input matInput formControlName="dni" type="text" id="dni" name="dni" [(ngModel)]="estudiante.dni" required>
+            <mat-label>Dni del docente</mat-label>
+            <input matInput formControlName="dni" type="text" id="dni" name="dni" [(ngModel)]="docente.dni" required>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
-            <mat-label>Nombre del estudiante</mat-label>
-            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="estudiante.nombre" required>
+            <mat-label>Nombre del docente</mat-label>
+            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="docente.nombre" required>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
-            <mat-label>Apellidos del Estudiante</mat-label>
-            <textarea matInput type="text" id="apellidos" name="apellidos" [(ngModel)]="estudiante.apellidos" required></textarea>
+            <mat-label>Apellidos del docente</mat-label>
+            <textarea matInput type="text" id="apellidos" name="apellidos" [(ngModel)]="docente.apellidos" required></textarea>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
-            <mat-label>Direccion</mat-label>
-            <textarea matInput type="text" id="direccion" name="direccion" [(ngModel)]="estudiante.direccion" required></textarea>
+            <mat-label>Especialidad</mat-label>
+            <textarea matInput type="text" id="especialidad" name="especialidad" [(ngModel)]="docente.especialidad" required></textarea>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Edad</mat-label>
-            <textarea matInput type="number" id="edad" name="edad" [(ngModel)]="estudiante.edad" required></textarea>
+            <textarea matInput type="number" id="edad" name="edad" [(ngModel)]="docente.edad" required></textarea>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Estado</mat-label>
-            <textarea matInput type="number" id="estado" name="estado" [(ngModel)]="estudiante.estado" required></textarea>
+            <textarea matInput type="number" id="estado" name="estado" [(ngModel)]="docente.estado" required></textarea>
         </mat-form-field>
     </mat-card-content>
     <mat-divider></mat-divider>
     <mat-card-footer class="footer">
         <div>
-            <button mat-raised-button class="button-container" color="primary" type="submit" (click)="crearEstudiante()" >Crear curso
+            <button mat-raised-button class="button-container" color="primary" type="submit" (click)="crearDocente()" >Crear curso
                 <mat-icon matSuffix>save</mat-icon>
             </button>
             <button mat-raised-button class="button-container" color="warn" type="submit" (click)="salir()">Salir

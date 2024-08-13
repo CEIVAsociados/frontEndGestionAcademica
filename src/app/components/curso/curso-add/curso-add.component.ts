@@ -26,7 +26,7 @@ export class CursoAddComponent {
           this.salir();
         },
         error:(error:HttpErrorResponse)=>{
-          console.log(error.status);
+          console.log(error.message);
           this.salir();
         }
       }

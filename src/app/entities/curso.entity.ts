@@ -1,6 +1,6 @@
 export class CursoEntity{
-    nombre:string;
-    descripcion:string;
-    horario:string;
+    name:string;
+    description:string;
+    schedule:string;
     profesor:string;
 }

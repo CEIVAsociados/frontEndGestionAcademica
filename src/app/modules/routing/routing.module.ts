@@ -10,6 +10,7 @@ import { CursoEditComponent } from '../../components/curso/curso-edit/curso-edit
 import { CursoAddComponent } from '../../components/curso/curso-add/curso-add.component';
 import { CursoListComponent } from '../../components/curso/curso-list/curso-list.component';
 import { CursoInfoComponent } from '../../components/curso/curso-info/curso-info.component';
+import { AdminComponent } from 'src/app/components/inicio/admin/admin.component';
 
 /*import { MenuComponent } from 'src/app/components/menu/menu.component';
 import { PersonListComponent } from 'src/app/components/person/person-list/person-list.component';
@@ -27,7 +28,9 @@ const routes:Routes=[
       { path: ':id', component: CursoEditComponent }
     ]  
   },
-  { path: 'cursosadd', component: CursoAddComponent }
+  { path: 'cursosadd', component: CursoAddComponent },
+  { path: 'admin', component: AdminComponent}
+  
 ];
 
 @NgModule({

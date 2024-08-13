@@ -1,43 +1,30 @@
-<app-nav></app-nav>
-<section id="courses" class="section bg-light">
-    <div class="container">
-        <h2 class="text-center">Nuevos Cursos</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img class = "img-width img-thumbnail rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvoTXzbs7necpPymRylQ2IJZuaoukTb8sUMw&s" class="card-img-top" alt="Curso 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Computación</h5>
-                        <p class="card-text">Descripción breve del curso 1.</p>
-                        <a href="#" class="btn btn-primary">Más Información</a>
-                        
-                    </div>
-                    <a href="#" class="btn btn-primary">Inscribirse</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img class = "img-width img-thumbnail rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZO995TbEuKgiTPERJs3rLf5rcrFfMESVGjw&s" class="card-img-top" alt="Curso 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Oratoria y Liderazgo</h5>
-                        <p class="card-text">Descripción breve del curso 2.</p>
-                        <a href="#" class="btn btn-primary">Más Información</a>
-                       
-                    </div>
-                    <a href="#" class="btn btn-primary">Inscribirse</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img class = "img-width img-thumbnail rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStAMvJUm-lYMx06iHeqnDGvwRUe4hgspryjA&s" class="card-img-top" alt="Curso 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Inglés Británico</h5>
-                        <p class="card-text">Descripción breve del curso 3.</p>
-                        <a href="#" class="btn btn-primary">Más Información</a>
-                    </div>
-                    <a href="#" class="btn btn-primary">Inscribirse</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<app-nav-admin></app-nav-admin>
+<br>
+<div class="container">
+    <h2 class="text-center">Lista de Cursos registrados en el sistema</h2>
+</div>
+<div class="container">
+    <button class="btn-primary">Agregar Nuevo Curso</button>
+</div>
+
+<br>
+<table style="margin: 0 auto;">
+    <tr>
+       <td colspan="4" style="text-align: center;" >Listado de Cursos</td>
+
+    </tr>
+    <tr>
+        <td>Titulo de curso</td>
+        <td>Descripcion</td>
+        <td>Profesos</td>
+        <td>Horario</td>
+        <td>Op</td>
+    </tr>
+    <tr *ngFor="let curso of cursos">
+        <td>{{curso.name}}</td>
+        <td>{{curso.description}}</td>
+        <td>{{curso.profesor}}</td>
+        <td>{{curso.schedule}}</td>
+        <td> <a [routerLink]="['/cursosedit', curso.name]">Editar</a> </td>
+    </tr>
+</table>

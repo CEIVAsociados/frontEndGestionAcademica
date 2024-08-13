@@ -17,7 +17,11 @@ export class CursoService {
   }
 
   public crearCurso(cursoEntity:CursoEntity){
-    return this.httpClient.post<CursoEntity>(this.url+"/curses",cursoEntity);
+    return this.httpClient.post<CursoEntity>(this.url+"/courses",cursoEntity);
+  }
+
+  public listarCursos(){
+    return this.httpClient.get<CursoEntity[]>(this.url+"/courses",{headers:this.httpHeaders});
   }
 
 }

@@ -1,3 +1,4 @@
+<app-nav-admin></app-nav-admin>
 <mat-card class="example-card">
     <mat-card-header class="header">
         <mat-card-title class="titulo">Agregar nuevo curso</mat-card-title>
@@ -36,50 +37,3 @@
         </div>        
     </mat-card-footer>
 </mat-card>
-    
-   
-
-
-
-
-
-<!--<mat-card>
-
-   
-    
-       
-    
-    
-        
-            <button mat-raised-button color="primary" type="submit" (click)="crearCurso()" >Crear curso
-                <mat-icon matSuffix>save</mat-icon>
-            </button>
-            <button mat-raised-button color="warn" type="submit" (click)="salir()">Salir
-                <mat-icon matSuffix>logout</mat-icon>
-            </button>
-        </mat-form-field>
-    </mat-card-footer>
-  </mat-card>-->
-
-<app-nav-admin></app-nav-admin>
-<br>
-<table style="margin:0 auto;" >
-    <tr>
-        <td>Nombre del curso:<input type="text" [(ngModel)]="curso.name" />  </td>
-    </tr>
-    <tr>
-        <td>Descripcion:<input type="text" [(ngModel)]="curso.description" />  </td>
-    </tr>
-    <tr>
-        <td>Horario:<input type="text" [(ngModel)]="curso.schedule" />  </td>
-    </tr>
-    <tr>
-        <td>Profesor:<input type="text" [(ngModel)]="curso.profesor"/>  </td>
-    </tr>
-    <tr>
-        <td>
-            <button type="submit" (click)="crearCurso()" >Crear curso</button>
-            <button type="submit" (click)="salir()">Salir</button>
-        </td>
-    </tr>
-</table>|

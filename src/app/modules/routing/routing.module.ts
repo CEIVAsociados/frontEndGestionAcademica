@@ -33,7 +33,6 @@ const routes:Routes=[
       { path: ':id', component: CursoEditComponent },
     ]  
   },
-  { path: 'cursosadd', component: CursoAddComponent },
   { path: 'cursosedit', component: CursoEditComponent },
   { path: 'estudiante', component: EstudianteComponent,
     children: [
@@ -43,6 +42,11 @@ const routes:Routes=[
       { path: ':id', component: EstudianteEditarComponent },
     ]  
   },
+  {path: 'estudianteadd', component: EstudianteCrearComponent },
+  { path: 'estudiantelist', component: EstudianteComponent },
+  { path: 'estudiantedetalle', component: EstudianteDetalleComponent },
+  { path: ':id', component: EstudianteEditarComponent },
+  { path: 'estudiantelist', component: EstudianteComponent },
   { path: 'cursosadd', component: CursoAddComponent },
   { path: 'admin', component: AdminComponent}
   

@@ -73,7 +73,6 @@ import { AdminComponent } from './components/inicio/admin/admin.component';
     MatCardModule,
     MatSelectModule,
     ReactiveFormsModule,
-
     HttpClientModule,
     FormsModule
 ],

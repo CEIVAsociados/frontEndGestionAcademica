@@ -9,15 +9,15 @@
     <mat-card-content class="content">
         <mat-form-field class="field" appearance="fill">
             <mat-label>Nombre del Curso</mat-label>
-            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="curso.nombre" required>
+            <input matInput formControlName="nombre" type="text" id="nombre" name="nombre" [(ngModel)]="curso.name" required>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Descripción</mat-label>
-            <textarea matInput type="text" id="descripcion" name="descripcion" [(ngModel)]="curso.descripcion" required></textarea>
+            <textarea matInput type="text" id="descripcion" name="descripcion" [(ngModel)]="curso.description" required></textarea>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Horario</mat-label>
-            <textarea matInput type="text" id="horario" name="horario" [(ngModel)]="curso.horario" required></textarea>
+            <textarea matInput type="text" id="horario" name="horario" [(ngModel)]="curso.schedule" required></textarea>
         </mat-form-field>
         <mat-form-field class="field" appearance="fill">
             <mat-label>Profesor</mat-label>

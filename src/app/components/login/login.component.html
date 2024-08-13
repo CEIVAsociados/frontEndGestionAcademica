@@ -1,4 +1,87 @@
-<table style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+<mat-card class="example-card">
+    <mat-card-header class="header">
+      <div class="login-body">
+          <div mat-card-avatar class="header-image"></div> 
+          <mat-card-title class="title">Login</mat-card-title>
+      </div>
+      
+    </mat-card-header>
+    <mat-card-content >
+      <form>  <!--[formGroup]="loginForm" (ngSubmit)="onSubmit()"-->
+        <mat-form-field class="field" appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <input matInput formControlName="UserName"  id="userName" [(ngModel)]="user.userName" required>
+        </mat-form-field>
+        <mat-form-field class="field" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" id="password" [(ngModel)]="user.password"required>
+        </mat-form-field>
+        <button class="example-button-container" mat-raised-button color="primary" type="submit" (click)="login()">Login</button>
+        <!--<button class="example-button-container" mat-raised-button color="grey" type="submit" (click)="limpiar()">Login</button>-->
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<table style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
     <tr><td>Usuario<input type="text" id="userName" name="userName" [(ngModel)]="user.userName" /></td></tr>
     <tr><td>Password<input type="password" id="password" name="password" [(ngModel)]="user.password" /></td></tr>
     <tr>
@@ -7,4 +90,4 @@
             <button type="submit" (click)="login()" >Iniciar</button>
         </td>
     </tr>
-</table>
+</table>-->

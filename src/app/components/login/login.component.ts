@@ -12,9 +12,7 @@ import { LoginService } from '../../services/login.service'
 export class LoginComponent {
   user:UserEntity = new UserEntity();
 
-  constructor(
-    private loginService:LoginService,
-    private router:Router){
+  constructor(private loginService:LoginService, private router:Router){
 
   }
 
@@ -36,5 +34,4 @@ export class LoginComponent {
     this.user = new UserEntity();
     this.router.navigate(["login"]);
   }
-
 }

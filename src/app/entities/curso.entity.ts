@@ -3,4 +3,5 @@ export class CursoEntity{
     description:string;
     schedule:string;
     profesor:string;
+    estado:number;
 }

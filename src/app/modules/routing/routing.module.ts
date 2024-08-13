@@ -10,6 +10,10 @@ import { CursoEditComponent } from '../../components/curso/curso-edit/curso-edit
 import { CursoAddComponent } from '../../components/curso/curso-add/curso-add.component';
 import { CursoListComponent } from '../../components/curso/curso-list/curso-list.component';
 import { CursoInfoComponent } from '../../components/curso/curso-info/curso-info.component';
+import { EstudianteComponent } from 'src/app/estudiante/estudiante.component';
+import { EstudianteCrearComponent } from 'src/app/estudiante/estudiante-crear/estudiante-crear.component';
+import { EstudianteDetalleComponent } from 'src/app/estudiante/estudiante-detalle/estudiante-detalle.component';
+import { EstudianteEditarComponent } from 'src/app/estudiante/estudiante-editar/estudiante-editar.component';
 import { AdminComponent } from 'src/app/components/inicio/admin/admin.component';
 
 /*import { MenuComponent } from 'src/app/components/menu/menu.component';
@@ -25,7 +29,18 @@ const routes:Routes=[
   { path: 'cursos', component: CursoListComponent,
     children: [
       { path: 'add', component: CursoAddComponent },
-      { path: ':id', component: CursoEditComponent }
+      { path: 'info', component: CursoInfoComponent },
+      { path: ':id', component: CursoEditComponent },
+    ]  
+  },
+  { path: 'cursosadd', component: CursoAddComponent },
+  { path: 'cursosedit', component: CursoEditComponent },
+  { path: 'estudiante', component: EstudianteComponent,
+    children: [
+      { path: 'add', component: EstudianteCrearComponent },
+      { path: 'estudiantelist', component: EstudianteComponent },
+      { path: 'detalle', component: EstudianteDetalleComponent },
+      { path: ':id', component: EstudianteEditarComponent },
     ]  
   },
   { path: 'cursosadd', component: CursoAddComponent },
